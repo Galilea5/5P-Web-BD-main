@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: "Open Sans", sans-serif; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+#mainHeader {
+  padding: 1.5em 0; }
+  #mainHeader .logo {
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #555555; }
+    #mainHeader .logo span {
+      font-weight: 300; }
+
+#mainNav {
+  float: right;
+  font-size: 0.9em;
+  padding-top: 1em; }
+  #mainNav a {
+    color: #979BA8;
+    text-decoration: none;
+    margin-left: 6em; }
+
+.menu {
+  display: none; }
+
+#banner {
+  background: url(http://www.wallpapersinsider.com/wp-content/uploads/2016/04/The-Legend-Of-Tarzan-iPhone-Wallpaper.jpg) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 6.5em 0; }
+  #banner #contentWrapper {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #banner #mainPoster {
+    width: 275px;
+    position: relative;
+    float: left; }
+    #banner #mainPoster .playMovie {
+      width: 100%;
+      max-width: 100%; }
+    #banner #mainPoster .playBtn {
+      position: absolute;
+      width: 80px;
+      left: 50%;
+      top: 50%;
+      margin: -40px 0 0 -40px; }
+  #banner #content {
+    float: left;
+    width: 700px;
+    margin-left: 100px; }
+    #banner #content .title {
+      display: inline;
+      font-size: 1.75em;
+      color: #ffffff; }
+    #banner #content .reviews {
+      display: inline;
+      margin-left: 1em; }
+      #banner #content .reviews i {
+        color: #D09538;
+        font-size: 1.35em;
+        margin: 0 0.15em; }
+      #banner #content .reviews .inactive {
+        color: #9C9C9C; }
+    #banner #content .description {
+      color: #bbbebf;
+      font-size: 1em;
+      line-height: 2; }
+    #banner #content .info {
+      color: #ffffff;
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-top: 3em; }
+      #banner #content .info span {
+        margin: 0 0.5em; }
+
+#topMovies, #topShows {
+  padding: 5em 0; }
+  #topMovies header, #topShows header {
+    padding: 0 0 1.5em 0; }
+    #topMovies header h2, #topMovies header .viewMore, #topShows header h2, #topShows header .viewMore {
+      display: inline; }
+    #topMovies header h2, #topShows header h2 {
+      font-size: 1.75em; }
+    #topMovies header .viewMore, #topShows header .viewMore {
+      float: right;
+      font-size: 0.8em;
+      margin: 0.75em 3.5% 0; }
+
+#topMovies {
+  border-bottom: 1px solid #d4d4d4; }
+
+.row {
+  width: 100%; }
+  .row .poster {
+    width: 14%;
+    float: left;
+    margin-right: 2.5%; }
+    .row .poster img {
+      width: 100;
+      max-width: 100%;
+      border-radius: 0.5em; }
+    .row .poster .title {
+      font-size: 1.25em;
+      margin: 1em 0 0 0;
+      color: #555555; }
+    .row .poster .posterInfo {
+      font-size: 0.75em;
+      color: #979BA8;
+      margin: 0.5em 0; }
+
+#notification {
+  padding: 5em 0;
+  text-align: center;
+  background: #000000; }
+  #notification .notify {
+    width: 600px;
+    margin: 0 auto;
+    color: #979BA8; }
+  #notification h2 {
+    font-size: 1.75em; }
+  #notification .yourInfo {
+    margin-top: 3em;
+    width: 600px;
+    margin: 0 auto; }
+    #notification .yourInfo input[type="text"], #notification .yourInfo [type="email"] {
+      width: 48%;
+      margin: 0 0.5%;
+      height: 3.25em;
+      border: none;
+      outline: none;
+      border-radius: 0.3em;
+      background: #404043;
+      padding: 0.5em 1.25em;
+      font-size: 0.8em;
+      color: #ffffff; }
+    #notification .yourInfo .btn {
+      border: none;
+      outline: none;
+      padding: 1em 4.5em;
+      border-radius: 2em;
+      background: #D09538;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-top: 3em; }
+
+footer {
+  padding: 2.5em 0;
+  text-align: center; }
+  footer .logo {
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #555555; }
+    footer .logo span {
+      font-weight: 300; }
+  footer .copyright {
+    color: #979BA8;
+    font-size: 0.75em;
+    margin: 0; }
+  footer .links {
+    display: inline; }
+    footer .links a {
+      color: #979BA8;
+      font-size: 0.75em;
+      text-decoration: none;
+      margin: 0 0.5em; }
+      footer .links a:hover {
+        color: #D09538; }
+
+@media only screen and (max-width: 768px) {
+  #mainNav {
+    display: none; }
+
+  #mainNav.active {
+    display: block;
+    width: 100%; }
+    #mainNav.active a {
+      display: block;
+      padding: 1em 0;
+      border-bottom: 1px solid #e9e9e9; }
+      #mainNav.active a:last-child {
+        border-bottom: none; }
+
+  .menu {
+    display: block;
+    float: right; }
+    .menu i {
+      font-size: 1.5em;
+      color: #555555;
+      padding-top: 0.6em; }
+
+  #banner {
+    padding: 3.5em 0; }
+    #banner #contentWrapper {
+      width: 900px;
+      max-width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #banner #mainPoster {
+      width: 275px;
+      position: relative;
+      float: left; }
+      #banner #mainPoster .playMovie {
+        width: 100%;
+        max-width: 100%; }
+      #banner #mainPoster .playBtn {
+        position: absolute;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin: -40px 0 0 -40px; }
+    #banner #content {
+      float: left;
+      width: 700px;
+      margin-left: 100px; }
+      #banner #content .title {
+        display: inline;
+        font-size: 1.75em;
+        color: #ffffff; }
+      #banner #content .reviews {
+        display: inline;
+        margin-left: 1em; }
+        #banner #content .reviews i {
+          color: #D09538;
+          font-size: 1.35em;
+          margin: 0 0.15em; }
+        #banner #content .reviews .inactive {
+          color: #9C9C9C; }
+      #banner #content .description {
+        color: #bbbebf;
+        font-size: 1em;
+        line-height: 2; }
+      #banner #content .info {
+        color: #ffffff;
+        font-size: 0.8em;
+        font-weight: 700;
+        margin-top: 3em; }
+        #banner #content .info span {
+          margin: 0 0.5em; } }
+
+/*# sourceMappingURL=style.css.map */

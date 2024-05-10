@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Form.css";
+//import "./Form.css";
 import Data from "./Data";
+import Mymovielist from "../Mymovielist/Mymovielist"
 
 const initialUsers = [
     { email: 'a22110067@ceti.mx', password: '22110067' },
@@ -36,11 +37,14 @@ function Form() {
         setEmail("");
         setPassword("");
     }
+    const redirectToPage = () => {
+        window.location.href = "./src/components/Mymovielist/Mymovielist.tsx";
+    }
 
     return (
         <>
             {isLoggedIn ? (
-                <Data email={email} isLoggedIn={isLoggedIn} />
+                <Mymovielist/>
             ) : (
                 <div className="card">
                     <h1 className="title">Iniciar Sesión</h1>
