@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-//import "./Form.css";
+import React, { useState, useEffect } from "react";
 import Data from "./Data";
-import Mymovielist from "../Mymovielist/Mymovielist"
+import Mymovielist from "../Mymovielist/Mymovielist";
 
 const initialUsers = [
-    { email: 'a22110067@ceti.mx', password: '22110067' },
     { email: 'a22110055@ceti.mx', password: '22110055' },
     // Puedes agregar más usuarios aquí
 ];
@@ -15,11 +13,24 @@ function Form() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [users, setUsers] = useState(initialUsers);
 
+    // Cargar usuarios desde el almacenamiento local al inicio
+    useEffect(() => {
+        const storedUsers = localStorage.getItem("users");
+        if (storedUsers) {
+            setUsers(JSON.parse(storedUsers));
+        }
+    }, []);
+
+    // Actualizar el almacenamiento local cuando se agregue un nuevo usuario
+    useEffect(() => {
+        localStorage.setItem("users", JSON.stringify(users));
+    }, [users]);
+
     const handleInputChange = (setState) => {
         return (event) => {
             setState(event.target.value);
-        }
-    }
+        };
+    };
 
     const handleLogin = () => {
         const foundUser = users.find(user => user.email === email && user.password === password);
@@ -28,7 +39,7 @@ function Form() {
         } else {
             alert("Correo electrónico o contraseña incorrectos");
         }
-    }
+    };
 
     const handleRegister = () => {
         const newUser = { email, password };
@@ -36,10 +47,7 @@ function Form() {
         alert("Usuario registrado correctamente");
         setEmail("");
         setPassword("");
-    }
-    const redirectToPage = () => {
-        window.location.href = "./src/components/Mymovielist/Mymovielist.tsx";
-    }
+    };
 
     return (
         <>
