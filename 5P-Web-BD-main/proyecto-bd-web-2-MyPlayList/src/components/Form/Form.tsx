@@ -2,16 +2,11 @@ import React, { useState, useEffect } from "react";
 import Data from "./Data";
 import Mymovielist from "../Mymovielist/Mymovielist";
 
-const initialUsers = [
-    { email: 'a22110055@ceti.mx', password: '22110055' },
-    // Puedes agregar más usuarios aquí
-];
-
 function Form() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [users, setUsers] = useState(initialUsers);
+    const [users, setUsers] = useState([]);
 
     // Cargar usuarios desde el almacenamiento local al inicio
     useEffect(() => {
